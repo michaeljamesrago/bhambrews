@@ -2,13 +2,19 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Brewery from './components/Brewery'
 import Notification from './components/Notification'
+import GoogleMap from './components/GoogleMap'
+import Marker from './components/Marker'
+import { Wrapper } from "@googlemaps/react-wrapper";
+
+const markers = [
+  { lat: 48.7601273, lng: -122.4645645 },
+];
 
 const App = () => {
   const [breweries, setBreweries] = useState([])
   const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
-    console.log('effect')
     axios
       .get('https://api.openbrewerydb.org/breweries?by_city=bellingham')
       .then(response => {
@@ -35,6 +41,17 @@ const App = () => {
           <Brewery key={brewery.id} brewery={brewery}/>
         )}
       </ul>
+      <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+        <Wrapper apiKey={"AIzaSyDdK9NheJPLy2jDcxdoNoQj0FkWVM4HhZk"}>
+          <GoogleMap
+            center={{ lat: 48.7601273, lng: -122.4645645 }}
+            zoom={18}
+            style={{ flexGrow: "1", height: "100%" }}
+          >
+            <Marker position={{ lat: 48.7601273, lng: -122.4645645 }} />;
+          </GoogleMap>
+        </Wrapper>
+      </div>
     </div>
   )
 }

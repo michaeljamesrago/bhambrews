@@ -1,7 +1,6 @@
 import React from 'react'
 
 const BreweryDetail = ({ brewery }) => {
-    console.log("brewery detail: ", brewery)
   return (
       <div>
           <ul>
