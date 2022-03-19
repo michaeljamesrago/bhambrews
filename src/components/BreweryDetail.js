@@ -23,7 +23,7 @@ const BreweryDetail = props => {
                 <div className="modal-body">
                     <p>{props.brewery.name}</p>
                     <div style={{ display: "flex", height: "35vh", width: "35vw" }}>
-                        <Wrapper apiKey={"AIzaSyDdK9NheJPLy2jDcxdoNoQj0FkWVM4HhZk"}>
+                        <Wrapper apiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>
                         <GoogleMap
                             center={coordinates}
                             zoom={18}
