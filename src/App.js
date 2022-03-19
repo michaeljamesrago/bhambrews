@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import Brewery from './components/Brewery'
+import BreweryList from './components/BreweryList'
 import Notification from './components/Notification'
 import GoogleMap from './components/GoogleMap'
 import Marker from './components/Marker'
@@ -36,12 +36,8 @@ const App = () => {
         </div>
       </div>
       <Notification message={errorMessage} />
-      <ul>
-        {breweries.map(brewery => 
-          <Brewery key={brewery.id} brewery={brewery}/>
-        )}
-      </ul>
-      <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      <BreweryList breweries={breweries} />
+      <div style={{ display: "flex", height: "50vh", width: "50vw" }}>
         <Wrapper apiKey={"AIzaSyDdK9NheJPLy2jDcxdoNoQj0FkWVM4HhZk"}>
           <GoogleMap
             center={{ lat: 48.7601273, lng: -122.4645645 }}
