@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+In order for this app to work, you must add a .env file in the root directory containing this line:
+
+REACT_APP_GOOGLEMAPS_API_KEY={YOUR GOOGLE MAPS API KEY}
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
