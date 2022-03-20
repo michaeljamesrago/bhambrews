@@ -15,7 +15,8 @@ li.brewery-item {
 
 .brewery-list {
   position: relative;
-  top: 200px;
+  top: 10px;
+  padding-top: 20px;
   background-color: rgb(219, 243, 225);
   min-width: 575px;
   max-width: 750px;
@@ -23,6 +24,7 @@ li.brewery-item {
 }
 
 .brewery-list ul {
+  margin-top: 18px;
   opacity: .7;
 }
 
@@ -93,10 +95,35 @@ a.brewery-link:hover {
 }
 
 .page-header {
-  position: fixed;
+  position: relative;
+}
+
+.header-text {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  margin: 0 0 0 24px;
+  font-size: 60px;
+}
+
+.list-text {
+  padding: 24px 60px 16px 60px;
+  font-size: 24px;
+  max-width: 545px;
+  margin: auto;
+  color: rgb(3, 87, 7);
+  text-align: center;
+  background-color: rgb(234, 253, 234);
+  border-radius: 25px;
+  border: 2px solid rgb(2, 61, 5);
+  opacity: .7;
 }
 
 .main-image {
+  position: relative;
   width: 100%;
+  min-width: 575px;
   opacity: .5;
 }

@@ -12,6 +12,7 @@ const BreweryList = ({ breweries }) => {
 
     return (
         <div className="container brewery-list">
+            <p className="list-text">These are the breweries of Bellingham, Washington. Click on any of the links below for more information and a map.</p>
             <ul>
                 {
                     breweries.map((brewery) =>
