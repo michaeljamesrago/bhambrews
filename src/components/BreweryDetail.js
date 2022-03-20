@@ -27,6 +27,7 @@ const BreweryDetail = props => {
                         {props.brewery.address_2 ? <li>props.brewery.address2</li> : null}
                         {props.brewery.address_3 ? <li>props.brewery.address3</li> : null}
                         <li>{props.brewery.city}, {props.brewery.state} {props.brewery.postal_code}</li>
+                        {props.brewery.website_url ? <li><a href={props.brewery.website_url} target="_blank">Visit Website</a></li> : null}
                     </ul>
                     <div style={{ display: "flex", height: "35vh", width: "100%" }}>
                         <Wrapper apiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>

@@ -18,7 +18,7 @@ const Marker = (options) => {
     React.useEffect(() => {
       if (marker) {
         const infowindow = new window.google.maps.InfoWindow({
-          content: ``
+          content: `Here`
         });
         marker.setOptions(options);
   
