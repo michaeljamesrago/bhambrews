@@ -2,7 +2,6 @@ import React from 'react'
 
 const Marker = (options) => {
     const [marker, setMarker] = React.useState();
-    const contentRef = React.useRef(null);
   
     React.useEffect(() => {
       if (!marker) {
@@ -19,7 +18,7 @@ const Marker = (options) => {
     React.useEffect(() => {
       if (marker) {
         const infowindow = new window.google.maps.InfoWindow({
-          content: `daver`
+          content: ``
         });
         marker.setOptions(options);
   

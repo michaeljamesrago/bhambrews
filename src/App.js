@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import BreweryList from './components/BreweryList'
 import Notification from './components/Notification'
+import PageHeader from './components/PageHeader'
 
 const App = () => {
   const [breweries, setBreweries] = useState([])
@@ -23,11 +24,7 @@ const App = () => {
 
   return (
     <div>
-      <div className="container">
-        <div className="jumbotron">
-          <h1>Bellingham Breweries</h1>
-        </div>
-      </div>
+      <PageHeader />
       <Notification message={errorMessage} />
       <BreweryList breweries={breweries} />
     </div>

@@ -1,46 +1,102 @@
 h1 {
     color: green;
-  }
+}
 
-  li {
-    color: grey;
-    padding-top: 3px;
-    font-size: 30px;
-  }
+body {
+  background-color: rgb(235, 243, 240);
+}
 
-  .error {
-    color: red;
-    background: lightgrey;
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+li.brewery-item {
+  color: grey;
+  padding-top: 3px;
+  font-size: 30px;
+  text-align: center;
+}
 
-  .modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.brewery-list {
+  position: relative;
+  top: 200px;
+  background-color: rgb(219, 243, 225);
+  min-width: 575px;
+  max-width: 750px;
+  border-radius: 25px;
+}
 
-  .modal-content {
-    width: 500px;
-    background-color: #fff;
-  }
+.brewery-list ul {
+  opacity: .7;
+}
 
-  .modal-header, .modal-footer {
-    padding: 10px;
-  }
+ul {
+  list-style: none;
+  line-height: 3em;
+  padding: 0px;
+}
 
-  .modal-body {
-    padding: 10px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
+a.brewery-link {
+  color: green;
+}
+
+a.brewery-link:hover {
+  color: rgb(1, 44, 3);
+  text-decoration: none;
+}
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-body ul {
+  list-style: none;
+  line-height: 1.7em;
+}
+
+.modal-body li {
+  font-size: 24px;
+  padding: 0px;
+}
+
+.page-header {
+  position: fixed;
+}
+
+.main-image {
+  width: 100%;
+  opacity: .5;
+}

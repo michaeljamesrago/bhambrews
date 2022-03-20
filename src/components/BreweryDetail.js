@@ -21,8 +21,14 @@ const BreweryDetail = props => {
                     <h4 className="modal-title">Brewery Details</h4>
                 </div>
                 <div className="modal-body">
-                    <p>{props.brewery.name}</p>
-                    <div style={{ display: "flex", height: "35vh", width: "35vw" }}>
+                    <ul>
+                        <li>{props.brewery.name}</li>
+                        <li>{props.brewery.street}</li>
+                        {props.brewery.address_2 ? <li>props.brewery.address2</li> : null}
+                        {props.brewery.address_3 ? <li>props.brewery.address3</li> : null}
+                        <li>{props.brewery.city}, {props.brewery.state} {props.brewery.postal_code}</li>
+                    </ul>
+                    <div style={{ display: "flex", height: "35vh", width: "100%" }}>
                         <Wrapper apiKey={process.env.REACT_APP_GOOGLEMAPS_API_KEY}>
                         <GoogleMap
                             center={coordinates}

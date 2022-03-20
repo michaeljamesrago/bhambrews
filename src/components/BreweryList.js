@@ -11,12 +11,12 @@ const BreweryList = ({ breweries }) => {
     }
 
     return (
-        <div>
+        <div className="container brewery-list">
             <ul>
                 {
                     breweries.map((brewery) =>
-                        <li key={brewery.id}>
-                            {brewery.name} <button onClick={()=>handleClick(brewery)}>Show Modal</button>
+                        <li className="brewery-item" key={brewery.id}>
+                            <a href="#" className="brewery-link" onClick={()=>handleClick(brewery)}>{brewery.name}</a>
                         </li>
                     )
                 }
