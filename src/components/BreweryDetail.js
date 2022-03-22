@@ -34,8 +34,7 @@ const BreweryDetail = props => {
                         <GoogleMap
                             center={coordinates}
                             zoom={18}
-                            style={{ flexGrow: "1", height: "100%" }}
-                        >
+                            style={{ flexGrow: "1", height: "100%" }}>
                             <Marker position={coordinates} />;
                         </GoogleMap>
                         </Wrapper>

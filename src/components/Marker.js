@@ -1,9 +1,10 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 
 const Marker = (options) => {
-    const [marker, setMarker] = React.useState();
+    const [marker, setMarker] = useState();
   
-    React.useEffect(() => {
+    useEffect(() => {
       if (!marker) {
         setMarker(new window.google.maps.Marker());
       }
@@ -15,7 +16,7 @@ const Marker = (options) => {
       };
     }, [marker]);
   
-    React.useEffect(() => {
+    useEffect(() => {
       if (marker) {
         const infowindow = new window.google.maps.InfoWindow({
           content: `Here`

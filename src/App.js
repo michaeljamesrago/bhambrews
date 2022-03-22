@@ -6,20 +6,18 @@ import apiClient from './lib/apiClient'
 
 const App = () => {
   const [breweries, setBreweries] = useState([])
-  const [errorMessage, setErrorMessage] = useState(null)
+  const [errorMessage, setErrorMessage] = useState("")
 
   useEffect(() => {
     apiClient.fetchBreweries(
       (data) => {
         setBreweries(data)
+        if (errorMessage) { setErrorMessage("") }
       },
       (err) => {
         setErrorMessage(`Error: ${err.message}`)
-        setTimeout(() => {
-          setErrorMessage(null)
-        }, 5000)
       })
-  }, [])
+  }, [errorMessage])
 
   return (
     <div>
