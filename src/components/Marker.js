@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 const Marker = (options) => {
-    const [marker, setMarker] = useState();
+    const [marker, setMarker] = useState(null);
   
     useEffect(() => {
       if (!marker) {
